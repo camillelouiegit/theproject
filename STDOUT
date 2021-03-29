@@ -1,0 +1,11 @@
+Feature: Go React Sign up and Login.
+
+  Scenario: Sign up and login as Instructor       # src/goreact/testautomation/features/Sign_Up_Login.feature:3
+    Given the user is in the GOREACT login page.  # SignUp_Login_Steps.Verify_GoReact_Page()
+    When user Sign up as an instructor            # SignUp_Login_Steps.Sign_Up_As_Instructor()
+    Then user is able to sign up as an instructor # SignUp_Login_Steps.Verify_Logged_As_Instructor()
+
+  Scenario: Sign up and login as Student         # src/goreact/testautomation/features/Sign_Up_Login.feature:8
+    Given the user is in the GOREACT login page. # SignUp_Login_Steps.Verify_GoReact_Page()
+    When user Sign up as a Student               # SignUp_Login_Steps.Sign_Up_As_Student()
+    Then user is able to sign up as a student    # SignUp_Login_Steps.Verify_Logged_As_Student()

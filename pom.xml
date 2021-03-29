@@ -1,0 +1,297 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ToolsQA</groupId>
+  <artifactId>CucumberFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>CucumberFramework</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+  </properties>
+
+  <dependencies>
+ <!--*************************************************************************************************-->    
+ <!-- Selenium Webdriver version 3.141.59 used in Eclipse -->  
+    <dependency>
+	    <groupId>org.seleniumhq.selenium</groupId>
+	    <artifactId>selenium-java</artifactId>
+	    <version>3.141.59</version>
+	</dependency>
+ <!--*************************************************************************************************-->  	
+ <!--Junit added as unit test framework-->  
+    <dependency>	
+		 <groupId>junit</groupId>
+	     <artifactId>junit</artifactId>
+	     <version>4.12</version>
+	     <scope>test</scope>
+    </dependency>
+ <!--*************************************************************************************************-->      
+ <!--Cucumber dependencies-->  
+    <dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>1.2.5</version>
+	</dependency>
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-jvm</artifactId>
+	    <version>1.2.5</version>
+	    <type>pom</type>
+	</dependency>	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-junit</artifactId>
+	    <version>1.2.5</version>
+	    <scope>test</scope>
+	</dependency>	
+		<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-jvm-deps</artifactId>
+	    <version>1.0.5</version>
+	    <scope>provided</scope>
+	</dependency>
+<!--*************************************************************************************************--> 
+<!-- Cucumber Gherkin Syntax -->	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>gherkin</artifactId>
+	    <version>2.12.2</version>
+	    <scope>provided</scope>
+	</dependency>  
+<!--*************************************************************************************************--> 
+<!-- Cucumber Extent Advance Reporting -->
+	<dependency>
+		 <groupId>com.vimalselvam</groupId>
+		 <artifactId>cucumber-extentsreport</artifactId>
+		 <version>3.0.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.relevantcodes</groupId>
+	    <artifactId>extentreports</artifactId>
+	    <version>2.41.2</version>
+	</dependency>
+	<dependency>
+		 <groupId>com.aventstack</groupId>
+		 <artifactId>extentreports</artifactId>
+		 <version>3.1.2</version>
+	</dependency>
+<!--*************************************************************************************************--> 
+<!-- Cucumber JSON and Pretty Reporting -->	
+	<dependency>
+	    <groupId>net.masterthought</groupId>
+	    <artifactId>cucumber-reporting</artifactId>
+	    <version>4.5.1</version>
+	</dependency>	
+<!--*************************************************************************************************--> 
+<!-- Cobertura calculates the % code accessed by tests. Use to identify which parts of program
+are lacking test coverage, based on jcoverage-->	
+	<dependency>
+	    <groupId>net.sourceforge.cobertura</groupId>
+	    <artifactId>cobertura</artifactId>
+	    <version>2.1.1</version>
+	</dependency>	
+
+<!--*************************************************************************************************--> 
+<!-- JAVA Based mocking framework similar to junit but uses mock interface for unit testing-->	
+	<dependency>
+	    <groupId>org.mockito</groupId>
+	    <artifactId>mockito-all</artifactId>
+	    <version>2.0.2-beta</version>
+	</dependency>	
+<!--*************************************************************************************************--> 
+<!-- Cucumber TestNG Runner dependencies-->	
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-testng</artifactId>
+	    <version>1.2.5</version>
+	</dependency>  
+<!--*************************************************************************************************--> 
+<!--TestNG jar files for Runner class-->	
+	<dependency>
+		<groupId>org.testng</groupId>
+		<artifactId>testng</artifactId>
+		<version>6.9.10</version>
+		<scope>test</scope>
+	</dependency>
+<!--*************************************************************************************************--> 
+<!--Dependency for reading excel with use of SQL-->	
+	<dependency>
+	    <groupId>com.codoid.products</groupId>
+	    <artifactId>fillo</artifactId>
+	    <version>1.18</version>
+	</dependency>
+<!--*************************************************************************************************--> 
+
+
+
+	<dependency>
+		<groupId>xml-apis</groupId>
+		<artifactId>xml-apis</artifactId>
+		<version>1.4.01</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml</artifactId>
+		<version>3.9</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>xml-apis</artifactId>
+				<groupId>xml-apis</groupId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+
+	<dependency>
+		<groupId>net.sourceforge.jexcelapi</groupId>
+		<artifactId>jxl</artifactId>
+		<version>2.6.3</version>
+	</dependency>
+
+	<dependency>
+		<groupId>ru.yandex.qatools.ashot</groupId>
+		<artifactId>ashot</artifactId>
+		<version>1.4.12</version>
+	</dependency>
+
+	<dependency>
+		<groupId>javax.mail</groupId>
+		<artifactId>mail</artifactId>
+		<version>1.4</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-contrib</artifactId>
+		<version>3.6</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.geronimo.specs</groupId>
+		<artifactId>geronimo-stax-api_1.0_spec</artifactId>
+		<version>1.0.1</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi</artifactId>
+		<version>3.6</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-ooxml-schemas</artifactId>
+		<version>3.6</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.poi</groupId>
+		<artifactId>poi-scratchpad</artifactId>
+		<version>3.6</version>
+	</dependency>
+
+	<dependency>
+		<groupId>dom4j</groupId>
+		<artifactId>dom4j</artifactId>
+		<version>1.6.1</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.apache.xmlbeans</groupId>
+		<artifactId>xmlbeans</artifactId>
+		<version>2.3.0</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.google.inject</groupId>
+		<artifactId>guice</artifactId>
+		<version>4.0-beta</version>
+	</dependency>
+	<dependency>
+		<groupId>velocity</groupId>
+		<artifactId>velocity-dep</artifactId>
+		<version>1.4</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.google.guava</groupId>
+	    <artifactId>guava</artifactId>
+	    <version>27.1-jre</version>
+	</dependency>
+	<dependency>
+		<groupId>org.uncommons</groupId>
+		<artifactId>reportng</artifactId>
+		<version>1.1.4</version>
+	</dependency>	
+	
+	<dependency>
+	    <groupId>net.sourceforge.htmlunit</groupId>
+	    <artifactId>htmlunit</artifactId>
+	    <version>2.34.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>org.eclipse.jdt</groupId>
+		<artifactId>org.eclipse.jdt.junit.runtime</artifactId>
+		<version>3.4.650</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.sitture</groupId>
+	    <artifactId>cucumber-jvm-extentreport</artifactId>
+	    <version>3.1.2</version>
+	</dependency>
+<dependency>
+   <groupId>com.sun</groupId>
+   <artifactId>tools</artifactId>
+   <version>1.6</version>
+   <scope>system</scope>
+   <systemPath>C:\Program Files\Java\jdk1.8.0_221\lib\tools.jar</systemPath>
+</dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+<!--*************************************************************************************************--> 
+<!--Adding Maven & Surefire compiler plugin is mandatory-->
+<!--Use to compile the sources of project-->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+           <source>1.8</source>
+           <target>1.8</target>
+           <encoding>UTF-8</encoding>          
+        </configuration>
+      </plugin>   
+      
+
+<!--*************************************************************************************************--> 
+<!--Surefire is used during test phase of the build lifecycle to execute unit tests of an application-->      
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-plugin</artifactId>
+		<version>2.18.1</version>
+		<configuration>
+			<forkCount>0</forkCount>
+			<suiteXmlFiles>
+				<suiteXmlFile>testng.xml</suiteXmlFile>
+			</suiteXmlFiles>
+		</configuration>
+	  </plugin>	      
+	  
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-report-plugin</artifactId>
+		<version>2.20</version>
+	  </plugin>	  
+	  
+	           
+    </plugins>
+  </build>
+  
+
+  
+</project>
